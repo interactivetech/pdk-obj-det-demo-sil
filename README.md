@@ -11,9 +11,9 @@ See screenshot below:
 
 # Step 2: Setup and install
 * Open Terminal
-* `git clone https://github.com/interactivetech/pdk-obj-det-demo.git`
+* `git clone https://github.com/interactivetech/pdk-obj-det-demo-sil.git`
 * `cd pdk-obj-det-demo/`
-* `git clone http://github.com/interactivetech/pdk-use-cases-dev.git`
+* `git clone http://github.com/interactivetech/pdk-use-cases-dev-sil.git`
 
 * Go to MLDM: http://mldm-pachyderm.us.rdlabs.hpecorp.net/ , make sure there is a project called object-detection-demo
 * open the object-detection-demo project in MLDM and make sure all the pipelines (and repos) are deleted. We will create the data repo and the pachyderm pipelines in a jupyter notebook using the Pachyderm Python Client

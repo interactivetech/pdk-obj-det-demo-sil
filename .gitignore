@@ -45,7 +45,7 @@ gitignore.txt
 # Installer logs
 pip-log.txt
 pip-delete-this-directory.txt
-pdk-use-cases-dev/
+pdk-use-cases-dev-sil/
 
 # Unit test / coverage reports
 htmlcov/
