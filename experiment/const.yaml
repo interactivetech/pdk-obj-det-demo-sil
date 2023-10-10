@@ -19,18 +19,18 @@ hyperparameters:
     warmup: linear
     warmup_iters: 200 # incrementally increase the lr, warm up learn rate from [lr*warmup_ratio to lr] (0.02*0.001 to 0.02)
     warmup_ratio: 0.1 # The fraction between 0-1 that defines the percentage of lr you want to start the lr at
-    pretrained_model: "/lus/aiholus1/disk/andrew.mendez/frcnn_xview.pth"
+    pretrained_model: "/mnt/efs/shared_fs/determined/nb_fs/weights/frcnn_xview.pth"
     # finetune_ckpt: null
     finetune_ckpt: 
-        3: "/lus/aiholus1/disk/andrew.mendez/frcnn_3_xview.pth"
-        4: "/lus/aiholus1/disk/andrew.mendez/frcnn_4_xview.pth"
+        3: "/mnt/efs/shared_fs/determined/nb_fs/weights/frcnn_3_xview.pth"
+        4: "/mnt/efs/shared_fs/determined/nb_fs/weights/frcnn_4_xview.pth"
     step1: 504 # 14 epochs: 14*36 == 504
     step2: 540 # 15 epochs: 15*36 == 540
     model: fasterrcnn_resnet50_fpn
     # Dataset
     dataset_file: coco
     backend: local # specifiy the backend you want to use.  one of: gcs, aws, fake, local
-    data_dir: "/lus/aiholus1/disk/andrew.mendez/xview_3class_full/" # bucket name if using gcs or aws, otherwise directory to dataset
+    data_dir: "/mnt/efs/shared_fs/determined/nb_fs/datasets/xview_3class_full/" # bucket name if using gcs or aws, otherwise directory to dataset
     masks: false
     num_workers: 4
     device: cuda
