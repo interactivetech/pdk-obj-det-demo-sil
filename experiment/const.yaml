@@ -1,11 +1,12 @@
 # debug: true
-name: PDK Object Detection Demo 3 class
+name: PDK Object Detection Demo 2 class
 workspace: Andrew
 project: PDK Demo
-# bind_mounts:
-#     - host_path: /run/determined/workdir/shared_fs/
-#       container_path: /tmp/data/
-#       read_only: true
+bind_mounts:
+- container_path:  /mnt/efs/shared_fs/determined/
+  host_path:  /mnt/efs/shared_fs/determined/
+  propagation: rprivate
+  read_only: false
 profiling:
  enabled: true
  begin_on_batch: 0
@@ -30,7 +31,7 @@ hyperparameters:
     # Dataset
     dataset_file: coco
     backend: local # specifiy the backend you want to use.  one of: gcs, aws, fake, local
-    data_dir: "/mnt/efs/shared_fs/determined/nb_fs/datasets/xview_3class_full/" # bucket name if using gcs or aws, otherwise directory to dataset
+    data_dir: "/mnt/efs/shared_fs/determined/nb_fs/datasets/xview_2class_full/" # bucket name if using gcs or aws, otherwise directory to dataset
     masks: false
     num_workers: 4
     device: cuda
